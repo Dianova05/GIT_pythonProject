@@ -7,9 +7,12 @@
 def int_func(a):
     return a.title()
 
-print(int_func("ваацуацуавапкп"))
+print(int_func("урок"))
 
 user_words = input('Введите слова разделённые пробелами >>> ').split()
 
+str_up = ""
 for word in user_words:
-    print(int_func(word))
+    str_up += f"{word} "
+
+print(int_func(str_up))
