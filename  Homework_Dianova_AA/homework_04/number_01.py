@@ -7,7 +7,7 @@ try:
     time_work = float(time_work)
     salary = float(salary)
     bonus = float(bonus)
-    res = ((time_work * salary) + bonus)
+    res = (time_work * salary) + bonus
     print(f'заработная плата для сотрудника = {res} руб.')
 except ValueError:
     print('Введено не число!')
