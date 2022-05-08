@@ -12,7 +12,7 @@ def fact(n: int):
         yield factorial(i)
 
 
-input_data = input('Введите количество вычисленных факториалов: ')
+input_data = input('Введите число, для вычисления факториала: ')
 
 try:
     n = int(input_data)
