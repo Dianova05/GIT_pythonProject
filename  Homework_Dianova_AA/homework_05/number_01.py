@@ -4,7 +4,7 @@
 
 my_list = []
 while True:
-    line = input("Введите данные: ")
+    line = input("Введите данные (об окончании ввода свидетельствует пустая строка): ")
     if line == '':
         print(my_list)
         exit()
@@ -12,5 +12,5 @@ while True:
         newline = line + '\n'
         my_list.append(newline)
 
-    with open("test_01.txt", "w") as file_obj:
+    with open("test_01.txt", 'a+') as file_obj:
         file_obj.writelines(my_list)

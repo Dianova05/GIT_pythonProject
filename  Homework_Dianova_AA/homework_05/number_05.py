@@ -10,7 +10,7 @@ def my_file():
             file_obj.writelines(line)
             my_numb = line.split()
 
-            print(sum(map(int, my_numb)))
+            print(sum(map(float, my_numb)))
     except IOError:
         print('Ошибка в файле')
     except ValueError:
