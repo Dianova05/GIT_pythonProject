@@ -19,16 +19,19 @@ class Car:
         self.is_police = is_police
 
     def go(self):
-        self.speed = self.__speed
+        return f'Автомобиль {self.name} поехал'
 
     def stop(self):
-        self.speed = 0
+        return f'Автомобиль {self.name} остановился'
 
-    def turn(self, direction):
-        pass
+    def turn_right(self):
+        return f'Автомобиль {self.name} повернул вправо'
+
+    def turn_left(self):
+        return f'Автомобиль {self.name} повернул влево'
 
     def show_speed(self):
-        print(f'Текущая скорость автомобилья {self.name}: {self.speed}км/ч')
+        return f'Текущая скорость автомобиля {self.name} {self.speed} км/ч'
 
 
 class TownCar(Car):
@@ -40,7 +43,7 @@ class TownCar(Car):
     def show_speed(self):
         if self.speed > self.MAX_SPEED:
             print(f'Превышение скорости автомобилем {self.name}!')
-        print(f'Текущая скорость автомобилья {self.name}: {self.speed}км/ч')
+        print(f'Текущая скорость автомобиля {self.name}: {self.speed}км/ч')
 
 
 class SportCar(Car):
@@ -58,7 +61,7 @@ class WorkCar(Car):
     def show_speed(self):
         if self.speed > self.MAX_SPEED:
             print(f'Превышение скорости автомобилем {self.name}!')
-        print(f'Текущая скорость автомобилья {self.name}: {self.speed}км/ч')
+        print(f'Текущая скорость автомобиля {self.name}: {self.speed}км/ч')
 
 
 class PoliceCar(Car):
@@ -68,12 +71,12 @@ class PoliceCar(Car):
 
 
 if __name__ == '__main__':
-    pc = PoliceCar(180, 'голубой', 'У209ЕХ28')
-    wc1 = WorkCar(12, 'зеленый', 'М456УЕ56')
-    wc2 = WorkCar(120, 'белый', 'У315ОЛ65')
-    sc = SportCar(200, 'красный', 'shumackher')
-    tc1 = TownCar(80, 'серый', 'У400АМ27')
-    tc2 = TownCar(60, 'черный', 'O345EX96')
+    pc = PoliceCar(180, 'голубой', 'Ниссан')
+    wc1 = WorkCar(12, 'зеленый', 'Скания')
+    wc2 = WorkCar(120, 'оранжевый', 'КАМАЗ')
+    sc = SportCar(200, 'красный', 'АУДИ')
+    tc1 = TownCar(80, 'серый', 'Вольво')
+    tc2 = TownCar(60, 'черный', 'БМВ')
     pc.show_speed()
     pc.go()
     pc.show_speed()
@@ -91,3 +94,9 @@ if __name__ == '__main__':
     sc.show_speed()
     tc1.show_speed()
     tc2.show_speed()
+    print(pc.turn_right())
+    print(wc1.stop())
+    print(wc1.go())
+    print(tc1.turn_right())
+    print(tc2.show_speed())
+    print(sc.turn_left())
