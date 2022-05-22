@@ -21,7 +21,7 @@ for line in data_file.readlines():
     zaniatija = 0
 
     for x in re.findall('\d+', line):
-        zaniatija += int(x)
+        zaniatija += float(x)
     predmety.update({predmet: zaniatija})
 
 print(predmety)
