@@ -4,10 +4,10 @@
 import sys
 name_file, time_work, salary, bonus = sys.argv
 try:
-    time_work = int(time_work)
-    salary = int(salary)
-    bonus = int(bonus)
-    res = time_work * salary + bonus
+    time_work = float(time_work)
+    salary = float(salary)
+    bonus = float(bonus)
+    res = (time_work * salary) + bonus
     print(f'заработная плата для сотрудника = {res} руб.')
 except ValueError:
-    print('Not a number')
+    print('Введено не число!')
