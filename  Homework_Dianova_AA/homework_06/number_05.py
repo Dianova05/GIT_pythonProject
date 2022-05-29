@@ -16,28 +16,28 @@ class Stationery:
 class Pen(Stationery):
 
     def __init__(self):
-        super().__init__('ручка')
+        super().__init__('ручкой')
 
     def draw(self):
-        print(f'Запуск отрисовки. {self.title}')
+        print(f'Отрисовка {self.title}')
 
 
 class Pencil(Stationery):
 
     def __init__(self):
-        super().__init__('карандаш')
+        super().__init__('карандашом')
 
     def draw(self):
-        print(f'Запуск отрисовки. {self.title}')
+        print(f'Отрисовка {self.title}')
 
 
 class Handle(Stationery):
 
     def __init__(self):
-        super().__init__('маркер')
+        super().__init__('маркером')
 
     def draw(self):
-        print(f'Запуск отрисовки. {self.title}')
+        print(f'Отрисовка {self.title}')
 
 
 if __name__ == '__main__':
@@ -46,7 +46,8 @@ if __name__ == '__main__':
     h = Handle()
     s = Stationery('канцелярская принадлежность')
 
+    s.draw()
     p.draw()
     n.draw()
     h.draw()
-    s.draw()
+
